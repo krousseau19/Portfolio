@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
+      card.style.transform = 'translateY(0)';
     });
   });
 
