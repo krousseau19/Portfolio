@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kylian Rousseau — Portfolio</title>
+  <meta name="description" content="Portfolio de Kylian Rousseau, étudiant en BUT Informatique. Développement, réseau, base de données et gestion de projet.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">KR<span class="accent">.</span></a>
+      <ul class="nav__links">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="material-symbols-rounded theme-icon">dark_mode</span>
+        </button>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#parcours">Parcours</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes">
+      <div class="shape shape--1"></div>
+      <div class="shape shape--2"></div>
+      <div class="shape shape--3"></div>
+    </div>
+    <div class="hero__content reveal">
+      <span class="chip chip--tonal">
+        <span class="material-symbols-rounded">school</span>
+        Étudiant BUT Informatique — IUT du Limousin
+      </span>
+      <h1 class="hero__title">
+        Kylian<br><span class="accent">Rousseau</span>
+      </h1>
+      <p class="hero__role">Développeur Junior</p>
+      <p class="hero__subtitle">
+        Applications, Réseaux, Données &amp; Gestion de projet
+      </p>
+      <div class="hero__location">
+        <span class="material-symbols-rounded">location_on</span>
+        Limoges, France
+      </div>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--filled">
+          <span class="material-symbols-rounded">rocket_launch</span>
+          Voir mes projets
+        </a>
+        <a href="#contact" class="btn btn--outlined">
+          <span class="material-symbols-rounded">mail</span>
+          Me contacter
+        </a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span class="material-symbols-rounded scroll-icon">expand_more</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="chip chip--outline">
+          <span class="material-symbols-rounded">person</span>
+          Qui suis-je
+        </span>
+        <h2 class="section__title">À propos</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            Actuellement étudiant en <strong>BUT Informatique</strong> à l'IUT du Limousin,
+            je recherche un <strong>stage en entreprise (10 semaines)</strong> afin d'appliquer
+            mes compétences dans le monde professionnel.
+          </p>
+          <p>
+            Passionné par le développement d'applications, l'architecture réseau et la gestion de données,
+            j'ai développé des compétences solides en <strong>Python</strong>, <strong>Java</strong>,
+            <strong>C</strong>, <strong>SQL</strong>, <strong>HTML/CSS</strong> et <strong>Linux</strong>.
+            Mon approche est méthodique : cahier des charges, séparation des responsabilités et tests rigoureux.
+          </p>
+          <div class="about__extras">
+            <div class="about__block">
+              <h4><span class="material-symbols-rounded">interests</span> Centres d'intérêts</h4>
+              <div class="about__pills">
+                <span class="pill">Nouvelles technologies</span>
+                <span class="pill">Économie / Finance</span>
+                <span class="pill">Développement de jeux</span>
+              </div>
+            </div>
+            <div class="about__block">
+              <h4><span class="material-symbols-rounded">psychology</span> Soft skills</h4>
+              <div class="about__pills">
+                <span class="pill">Adaptabilité</span>
+                <span class="pill">Autonomie</span>
+                <span class="pill">Rigueur</span>
+                <span class="pill">Résolution de problèmes</span>
+                <span class="pill">Organisation</span>
+              </div>
+            </div>
+            <div class="about__block">
+              <h4><span class="material-symbols-rounded">translate</span> Langues</h4>
+              <div class="about__pills">
+                <span class="pill">Anglais — B2+</span>
+                <span class="pill">Espagnol — A2+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__cards reveal">
+          <div class="stat-card">
+            <span class="material-symbols-rounded stat-card__icon">code</span>
+            <span class="stat-card__value">8+</span>
+            <span class="stat-card__label">Projets réalisés</span>
+          </div>
+          <div class="stat-card">
+            <span class="material-symbols-rounded stat-card__icon">terminal</span>
+            <span class="stat-card__value">5+</span>
+            <span class="stat-card__label">Langages maîtrisés</span>
+          </div>
+          <div class="stat-card">
+            <span class="material-symbols-rounded stat-card__icon">trending_up</span>
+            <span class="stat-card__value">C1→C6</span>
+            <span class="stat-card__label">Compétences couvertes</span>
+          </div>
+          <div class="stat-card">
+            <span class="material-symbols-rounded stat-card__icon">work</span>
+            <span class="stat-card__value">1</span>
+            <span class="stat-card__label">Stage professionnel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PARCOURS (Timeline) ═══════════════ -->
+  <section class="section parcours" id="parcours">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="chip chip--outline">
+          <span class="material-symbols-rounded">route</span>
+          Mon parcours
+        </span>
+        <h2 class="section__title">Formations &amp; Expériences</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2024 — Aujourd'hui</span>
+            <h3 class="timeline__title">
+              <span class="material-symbols-rounded">school</span>
+              BUT Informatique
+            </h3>
+            <p class="timeline__place">IUT du Limousin — Limoges</p>
+            <p class="timeline__desc">Formation universitaire complète en informatique : développement applicatif, réseaux, bases de données, gestion de projet et travail en équipe.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot timeline__dot--accent"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Janvier — Avril 2024</span>
+            <h3 class="timeline__title">
+              <span class="material-symbols-rounded">emoji_events</span>
+              Trophées NSI 2024 — Sisyphe.io
+            </h3>
+            <p class="timeline__place">Lycée Edmond Perrier — Tulle</p>
+            <p class="timeline__desc">Développement d'un Sokoban revisité en équipe de 5. Rôle : <strong>Lead Developer</strong>, Game Designer et Pixel Artist. Gestion de projet et documentation technique.</p>
+            <a href="https://github.com/Acciaw/sisyphe.io" target="_blank" rel="noopener" class="timeline__link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Voir sur GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">2021 — 2024</span>
+            <h3 class="timeline__title">
+              <span class="material-symbols-rounded">menu_book</span>
+              Baccalauréat Général — Maths / NSI
+            </h3>
+            <p class="timeline__place">Lycée Edmond Perrier — Tulle</p>
+            <p class="timeline__desc">Spécialités Mathématiques et Numérique &amp; Sciences Informatiques. Premières bases en programmation et algorithmique.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot timeline__dot--accent"></div>
+          <div class="timeline__card">
+            <span class="timeline__date">Juin 2022 — 2 semaines</span>
+            <h3 class="timeline__title">
+              <span class="material-symbols-rounded">videogame_asset</span>
+              Stage d'observation — Asobo Studio
+            </h3>
+            <p class="timeline__place">Asobo Studio — Bordeaux</p>
+            <p class="timeline__desc">Découverte des métiers du jeu vidéo. Compréhension du fonctionnement global d'une entreprise tech, de l'organisation des équipes à la gestion de projets. Échanges avec des professionnels de l'informatique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="chip chip--outline">
+          <span class="material-symbols-rounded">verified</span>
+          Mon expertise
+        </span>
+        <h2 class="section__title">Compétences</h2>
+      </div>
+
+      <!-- Langages & Proficiency -->
+      <div class="lang-grid reveal">
+        <div class="lang-card">
+          <span class="lang-card__name">Python</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="92" style="--bar-color: var(--blue-500)"></div></div>
+          <span class="lang-card__label">Très bon</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-card__name">Java</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="90" style="--bar-color: var(--indigo-500)"></div></div>
+          <span class="lang-card__label">Très bon</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-card__name">HTML / CSS</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="88" style="--bar-color: var(--sky-500)"></div></div>
+          <span class="lang-card__label">Très bon</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-card__name">C</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="70" style="--bar-color: var(--blue-700)"></div></div>
+          <span class="lang-card__label">Bon</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-card__name">JS / PHP</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="50" style="--bar-color: var(--indigo-400)"></div></div>
+          <span class="lang-card__label">Académique</span>
+        </div>
+        <div class="lang-card">
+          <span class="lang-card__name">SQL</span>
+          <div class="lang-card__bar"><div class="lang-card__fill" data-level="75" style="--bar-color: var(--blue-400)"></div></div>
+          <span class="lang-card__label">Bon</span>
+        </div>
+      </div>
+
+      <!-- Outils & Domaines pills -->
+      <div class="tech-stack reveal">
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">build</span> Git</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">build</span> JetBrains</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">build</span> VS Code</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">build</span> Eclipse</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">storage</span> PostgreSQL</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">storage</span> SQL Server</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">lan</span> Kathara</span>
+        <span class="pill pill--tool"><span class="material-symbols-rounded" style="font-size:.9rem">search</span> Wireshark</span>
+        <span class="pill pill--domain"><span class="material-symbols-rounded" style="font-size:.9rem">code</span> Dév applicatif</span>
+        <span class="pill pill--domain"><span class="material-symbols-rounded" style="font-size:.9rem">dns</span> Réseaux</span>
+        <span class="pill pill--domain"><span class="material-symbols-rounded" style="font-size:.9rem">lock</span> Cryptographie</span>
+        <span class="pill pill--domain"><span class="material-symbols-rounded" style="font-size:.9rem">assignment</span> Gestion de projet</span>
+      </div>
+
+      <!-- Competence cards -->
+      <div class="skills__grid">
+
+        <div class="skill-card reveal" style="--card-accent: var(--blue-500)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">code</span>
+            <span class="skill-card__tag">C1</span>
+          </div>
+          <h3 class="skill-card__title">Développement d'applications</h3>
+          <p class="skill-card__desc">Concevoir, coder, tester et intégrer des applications complètes.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Maîtrise avancée</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="100"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: var(--blue-400)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">speed</span>
+            <span class="skill-card__tag">C2</span>
+          </div>
+          <h3 class="skill-card__title">Optimisation</h3>
+          <p class="skill-card__desc">Optimiser selon des critères de performance, ressources et précision.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Autonomie</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: var(--indigo-400)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">dns</span>
+            <span class="skill-card__tag">C3</span>
+          </div>
+          <h3 class="skill-card__title">Administration systèmes</h3>
+          <p class="skill-card__desc">Installer, configurer et maintenir une infrastructure réseau.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Autonomie</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: var(--sky-400)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">database</span>
+            <span class="skill-card__tag">C4</span>
+          </div>
+          <h3 class="skill-card__title">Gestion des données</h3>
+          <p class="skill-card__desc">Concevoir, administrer et exploiter les données d'une entreprise.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Maîtrise partielle</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="50"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: var(--blue-600)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">assignment</span>
+            <span class="skill-card__tag">C5</span>
+          </div>
+          <h3 class="skill-card__title">Conduite de projet</h3>
+          <p class="skill-card__desc">Organiser et piloter un projet, satisfaire les besoins utilisateurs.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Autonomie</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="75"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal" style="--card-accent: var(--indigo-500)">
+          <div class="skill-card__header">
+            <span class="material-symbols-rounded skill-card__icon">group</span>
+            <span class="skill-card__tag">C6</span>
+          </div>
+          <h3 class="skill-card__title">Travail en équipe</h3>
+          <p class="skill-card__desc">Collaborer efficacement au sein d'une équipe informatique.</p>
+          <div class="skill-card__level">
+            <span class="level-label">Autonomie</span>
+            <div class="level-bar"><div class="level-bar__fill" data-level="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="chip chip--outline">
+          <span class="material-symbols-rounded">folder_open</span>
+          Réalisations
+        </span>
+        <h2 class="section__title">Projets</h2>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--blue-600)">
+            <span class="material-symbols-rounded project-card__banner-icon">sports_esports</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Python</span>
+              <span class="pill pill--sm">C1</span>
+              <span class="pill pill--sm">C2</span>
+            </div>
+            <h3 class="project-card__title">Mini-jeux Python</h3>
+            <p class="project-card__desc">
+              Création de jeux en console — <strong>Allumettes</strong>, <strong>Devinette</strong> et <strong>Puissance 4</strong>.
+              Architecture modulaire avec séparation des responsabilités (gestion variables/fonctions communes).
+              Ajout d'IA avec niveaux de difficulté (facile/difficile) via des algorithmes dédiés.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Compte rendu de 20+ pages &bull; Oral de 10 min
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--indigo-500)">
+            <span class="material-symbols-rounded project-card__banner-icon">dashboard</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Java</span>
+              <span class="pill pill--sm">JavaFX</span>
+              <span class="pill pill--sm">C1</span>
+              <span class="pill pill--sm">C2</span>
+            </div>
+            <h3 class="project-card__title">Latice — Jeu de plateau</h3>
+            <p class="project-card__desc">
+              Jeu de plateau <strong>Latice</strong> en Java (console + IHM JavaFX), en équipe de 5.
+              Rôle principal : <strong>développeur back-end</strong>, validation des versions et respect des deadlines.
+              Projet centré sur la <strong>qualité de code</strong> et le versionnage collaboratif (Git).
+              Plateau graphique complet — jeu 100 % fonctionnel.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Application fonctionnelle &bull; Démonstration
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--sky-500)">
+            <span class="material-symbols-rounded project-card__banner-icon">lan</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Kathara</span>
+              <span class="pill pill--sm">Linux</span>
+              <span class="pill pill--sm">C3</span>
+            </div>
+            <h3 class="project-card__title">Simulation Réseau — Kathara</h3>
+            <p class="project-card__desc">
+              Conception de l'architecture réseau initiale avec serveurs DHCP et DNS.
+              Configuration du <strong>routage</strong>, mise en place du <strong>SSH</strong> et
+              analyse des transferts <strong>UDP/TCP</strong> avec <strong>Wireshark</strong>.
+              Accès internet par nom de domaine sur chaque machine.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Compte rendu &bull; Démonstration live
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--blue-400)">
+            <span class="material-symbols-rounded project-card__banner-icon">storage</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">SQL</span>
+              <span class="pill pill--sm">Data Viz</span>
+              <span class="pill pill--sm">C4</span>
+            </div>
+            <h3 class="project-card__title">Gestion de Base de Données</h3>
+            <p class="project-card__desc">
+              Restructuration complète d'une BDD contenant plusieurs milliers de jeux.
+              Création de la <strong>nouvelle structure de BDD</strong>, rédaction de requêtes SQL
+              avancées et réalisation de <strong>visualisations graphiques</strong> des résultats.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Compte rendu &bull; Oral de démonstration
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--indigo-600)">
+            <span class="material-symbols-rounded project-card__banner-icon">menu_book</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Gestion de projet</span>
+              <span class="pill pill--sm">SMART</span>
+              <span class="pill pill--sm">C5</span>
+            </div>
+            <h3 class="project-card__title">Modernisation Bibliothèque</h3>
+            <p class="project-card__desc">
+              Automatisation de la gestion des emprunts/retours d'une bibliothèque universitaire (10 000 livres).
+              Rédaction du <strong>cahier des charges</strong> complet et application des méthodologies
+              <strong>SMART</strong> et <strong>MOSCOW</strong> pour la priorisation.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Cahier des charges &bull; Oral de présentation
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--blue-800)">
+            <span class="material-symbols-rounded project-card__banner-icon">apartment</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Gestion de projet</span>
+              <span class="pill pill--sm">Agile</span>
+              <span class="pill pill--sm">C5</span>
+            </div>
+            <h3 class="project-card__title">Goût d'Immo — Plateforme immobilière</h3>
+            <p class="project-card__desc">
+              Analyse et mise en œuvre d'une plateforme numérique de gestion immobilière.
+              Réalisation complète du <strong>rapport de projet</strong>, étude stratégique,
+              choix technologique et <strong>présentation</strong> de la solution finale.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Rapport &bull; Oral de présentation
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7 : Sisyphe.io -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--indigo-400)">
+            <span class="material-symbols-rounded project-card__banner-icon">videogame_asset</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Trophées NSI</span>
+              <span class="pill pill--sm">Game Dev</span>
+              <span class="pill pill--sm">Lead Dev</span>
+            </div>
+            <h3 class="project-card__title">Sisyphe.io — Sokoban revisité</h3>
+            <p class="project-card__desc">
+              Développement d'un <strong>Sokoban revisité</strong> pour les Trophées NSI 2024, en équipe de 5.
+              Rôles : <strong>Lead Developer</strong>, Game Designer et <strong>Pixel Artist</strong>.
+              Travail d'équipe, gestion de projet complète et rédaction de documentation technique.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Application &bull; Documentation technique
+            </div>
+            <a href="https://github.com/Acciaw/sisyphe.io" target="_blank" rel="noopener" class="project-card__link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Voir sur GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8 : Asobo Studio -->
+        <article class="project-card reveal" data-tilt>
+          <div class="project-card__banner" style="--banner-color: var(--blue-950)">
+            <span class="material-symbols-rounded project-card__banner-icon">sports_esports</span>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="pill pill--sm">Stage</span>
+              <span class="pill pill--sm">Jeux vidéo</span>
+              <span class="pill pill--sm">Observation</span>
+            </div>
+            <h3 class="project-card__title">Stage — Asobo Studio</h3>
+            <p class="project-card__desc">
+              Stage d'observation de <strong>2 semaines</strong> chez <strong>Asobo Studio</strong> (Bordeaux).
+              Découverte des métiers liés au jeu vidéo, compréhension du fonctionnement
+              d'une entreprise tech et échanges avec des professionnels de l'informatique.
+            </p>
+            <div class="project-card__deliverables">
+              <span class="material-symbols-rounded">description</span>
+              Rapport de stage &bull; Juin 2022
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="chip chip--outline">
+          <span class="material-symbols-rounded">connect_without_contact</span>
+          Restons en contact
+        </span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <div class="contact__content reveal">
+        <div class="contact__info">
+          <div class="contact__info-item">
+            <span class="material-symbols-rounded">location_on</span>
+            <span>87000 Limoges, France</span>
+          </div>
+          <div class="contact__info-item">
+            <span class="material-symbols-rounded">mail</span>
+            <a href="mailto:kylian.rousseau@etu.unilim.fr">kylian.rousseau@etu.unilim.fr</a>
+          </div>
+        </div>
+        <p class="contact__text">
+          Vous avez un projet, une question ou une opportunité de stage ?<br>
+          N'hésitez pas à me contacter !
+        </p>
+        <div class="contact__links">
+          <a href="mailto:kylian.rousseau@etu.unilim.fr" class="btn btn--filled btn--lg">
+            <span class="material-symbols-rounded">mail</span>
+            Email
+          </a>
+          <a href="https://github.com/krousseau19" target="_blank" rel="noopener" class="btn btn--tonal btn--lg">
+            <svg class="github-icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/kylian-rousseau87/" target="_blank" rel="noopener" class="btn btn--tonal btn--lg">
+            <svg class="linkedin-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kylian Rousseau — Fait avec passion</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
