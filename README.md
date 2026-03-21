@@ -1,7 +1,7 @@
 # Portfolio — Kylian Rousseau
 
-Portfolio personnel d'étudiant en BUT Informatique.  
-Design **Material 3 Expressive** avec palette bleue.
+Portfolio personnel d'un étudiant en BUT Informatique.  
+Limoges, France — 2026
 
 ## Structure
 
