@@ -11,7 +11,9 @@ Limoges, France — 2026
 
 ## Lancer
 
-Ouvrir `index.html` dans un navigateur ou utiliser un serveur local :
+Ouvrir le lien : `https://kylian-rousseau.netlify.app/` dans un navigateur
+
+Ou lancer un serveur local dans le dossier du projet :
 
 ```bash
 npx serve .
