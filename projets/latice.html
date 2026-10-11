@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latice — Jeu de plateau tactique Java &amp; JavaFX | Kylian Rousseau</title>
+  <meta name="description" content="Développement complet du jeu de plateau tactique Latice en Java et JavaFX. Architecture logicielle MVC, arbitre de règles et tests unitaires JUnit.">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header class="project-nav">
+    <div class="project-nav__inner">
+      <a href="../index.html#projects" class="project-nav__back">
+        <span class="material-symbols-rounded">arrow_back</span>
+        Retour au portfolio
+      </a>
+      <div class="project-nav__right">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="material-symbols-rounded theme-icon">dark_mode</span>
+        </button>
+        <a href="https://github.com/krousseau19/latice" target="_blank" rel="noopener" class="btn btn--filled btn--sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Dépôt GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="project-hero">
+    <div class="project-hero__inner">
+      <div class="project-hero__meta">
+        <span class="chip chip--tonal">
+          <span class="material-symbols-rounded">extension</span>
+          Jeu de Société Tactique
+        </span>
+        <span class="chip chip--outline">Java &bull; JavaFX</span>
+        <span class="chip chip--outline">Architecture MVC</span>
+      </div>
+
+      <h1 class="project-hero__title">Latice — Moteur &amp; Interface Graphique</h1>
+      <p class="project-hero__tagline">
+        Implémentation orientée objet d'un jeu de plateau tactique sur grille 9×9 pour 2 à 4 joueurs, 
+        doté d'une double interface (Console et JavaFX GUI), d'un moteur d'arbitrage de règles strict et d'une suite exhaustive de tests unitaires JUnit.
+      </p>
+
+      <div class="project-hero__bar">
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Rôle de Kylian</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">developer_mode</span>
+            Développeur Java &amp; JavaFX
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Équipe</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">group</span>
+            5 développeurs
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Technologies</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">code</span>
+            Java 17 &bull; JavaFX &bull; Maven
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Qualité Logicielle</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">verified</span>
+            Tests Unitaires JUnit 5
+          </span>
+        </div>
+      </div>
+
+      <div class="project-hero__actions">
+        <a href="https://github.com/krousseau19/latice" target="_blank" rel="noopener" class="btn btn--filled">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Consulter le projet GitHub
+        </a>
+        <a href="#galerie" class="btn btn--outlined">
+          <span class="material-symbols-rounded">image</span>
+          Captures de jeu JavaFX
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BANNIÈRE VISUELLE ═══════════════ -->
+  <div class="project-banner-preview" id="galerie">
+    <div class="project-banner-preview__frame">
+      <img src="../assets/img/latice_menu.png" alt="Menu principal de l'application Latice en JavaFX" class="project-banner-preview__img" fetchpriority="high">
+      <div class="project-banner-preview__caption">
+        <span>Interface JavaFX du jeu Latice — Écran de démarrage, paramétrage de partie et ambiances graphiques</span>
+        <span class="material-symbols-rounded">zoom_in</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTENU PRINCIPAL ═══════════════ -->
+  <main class="project-content">
+    <div class="project-grid-layout">
+
+      <!-- Colonne principale -->
+      <div class="project-main-col">
+
+        <!-- Contexte & Règles -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">casino</span>
+            Principes du jeu Latice &amp; Contexte
+          </h2>
+          <p class="project-section__text">
+            <strong>Latice</strong> est un jeu de société de stratégie combinatoire abstrait pour 2 à 4 joueurs. Le jeu se déroule sur une grille de 9×9 cases comprenant des emplacements spéciaux (cases Soleil et Lune).
+          </p>
+          <p class="project-section__text">
+            Chaque joueur pioche des tuiles caractérisées par deux dimensions :
+          </p>
+          <ul class="project-section__text" style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>6 symboles</strong> : Dauphin, Tortue, Gecko, Oiseau, Plume, Fleur.</li>
+            <li><strong>6 couleurs</strong> : Bleu, Cyan, Jaune, Magenta, Rouge, Vert.</li>
+          </ul>
+          <p class="project-section__text">
+            Pour poser une tuile adjacente à une ou plusieurs tuiles déjà placées sur le plateau, elle doit obligatoirement partager soit la même couleur, soit le même symbole avec chacune de ses voisines directes. Poser des tuiles sur les cases spéciales ou réussir des combinaisons multiples rapporte des pierres précieuses conférant des actions supplémentaires (rejouer, échanger). Le premier joueur à vider son stock de tuiles remporte la manche.
+          </p>
+        </article>
+
+        <!-- Architecture & Conception -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">account_tree</span>
+            Architecture Orientée Objet (POO) &amp; Découplage
+          </h2>
+          <p class="project-section__text">
+            Le projet a été pensé dès l'origine selon le patron d'architecture <strong>Modèle-Vue-Contrôleur (MVC)</strong> garantissant une indépendance absolue entre la logique de jeu et le rendu graphique.
+          </p>
+          <div class="project-features-list">
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">gavel</span></div>
+              <h3 class="feature-card__title">Arbitre Central (metier.arbitre)</h3>
+              <p class="feature-card__desc">
+                Moteur indépendant validant l'admissibilité des coups, le respect des correspondances orthogonales et le calcul des récompenses de pierres de vent/soleil.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">grid_on</span></div>
+              <h3 class="feature-card__title">Modélisation Plateau &amp; Tuiles</h3>
+              <p class="feature-card__desc">
+                Structures immuables représentant les coordonnées, la grille de 9×9 cases, les racks de tuiles personnalisés et la pile de pioche pseudo-aléatoire équilibrée.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">terminal</span></div>
+              <h3 class="feature-card__title">Interface Console</h3>
+              <p class="feature-card__desc">
+                Rendu textuel interactif permettant le déroulement intégral d'une partie dans le terminal, indispensable pour automatiser les tests et le débogage rapide.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">desktop_windows</span></div>
+              <h3 class="feature-card__title">Interface Riche JavaFX</h3>
+              <p class="feature-card__desc">
+                GUI animée avec gestion d'événements souris (glisser-déposer de tuiles), bruitages sonores intégrés et vue contextuelle d'aide aux règles.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Galerie d'images JavaFX -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">photo_library</span>
+            Captures de l'interface JavaFX
+          </h2>
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="../assets/img/latice_menu.png" alt="Menu principal de Latice" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Écran d'accueil &amp; Options</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/img/latice_regles.png" alt="Règles du jeu et plateau tactique Latice" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Plateau 9×9 &amp; Guide des règles</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Extrait de Code & Tests JUnit -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">terminal</span>
+            Extraits de code &amp; Validation des règles
+          </h2>
+          <p class="project-section__text">
+            Extrait de l'arbitre vérifiant la validité d'un placement selon les tuiles voisines :
+          </p>
+
+          <div class="code-showcase">
+            <div class="code-showcase__header">
+              <div class="code-showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span>src/main/java/metier/arbitre/Arbitre.java</span>
+            </div>
+            <pre><code>// Vérification de la compatibilité d'une tuile avec ses voisines
+public boolean estPlacementValide(Plateau plateau, Tuile tuile, Coordonnee coord) {
+    if (!plateau.estCaseVide(coord)) {
+        return false;
+    }
+
+    List&lt;Tuile&gt; voisines = plateau.getTuilesAdjacentes(coord);
+    if (voisines.isEmpty() && !plateau.estPremierCoup()) {
+        return false; // Doit être collée à au moins une tuile existante
+    }
+
+    // Chaque voisine doit partager soit la couleur, soit la forme
+    for (Tuile voisine : voisines) {
+        boolean matchCouleur = tuile.getCouleur().equals(voisine.getCouleur());
+        boolean matchForme   = tuile.getForme().equals(voisine.getForme());
+
+        if (!matchCouleur && !matchForme) {
+            return false; // Violation de la règle de correspondance
+        }
+    }
+    return true;
+}</code></pre>
+          </div>
+        </article>
+
+        <!-- Tests Unitaires & Rigueur -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">fact_check</span>
+            Qualité logicielle &amp; Tests unitaires
+          </h2>
+          <div class="project-section__text">
+            <p>
+              Une attention particulière a été portée à la fiabilité mathématique et logique du moteur :
+            </p>
+            <ul style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem;">
+              <li><strong>Tests unitaires JUnit 5</strong> : Validation de tous les scénarios de placement (croisements en angle, triple correspondance, pose centrale, tentative de superposition).</li>
+              <li><strong>Gestion des cas limites</strong> : Cas de pioche vide, égalités aux points de soleil, tours consécutifs avec pierres de vent.</li>
+              <li><strong>Intégration Maven</strong> : Pipeline de build standardisé automatisant l'exécution des tests à chaque compilation.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Colonne latérale -->
+      <aside class="project-sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">info</span>
+            Fiche Technique
+          </h3>
+          <div class="tech-spec-list">
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Type</span>
+              <span class="tech-spec-val">Jeu de plateau Java / JavaFX</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Plateau</span>
+              <span class="tech-spec-val">9×9 cases tactiques</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Langage</span>
+              <span class="tech-spec-val">Java 17 (POO avancée)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">GUI</span>
+              <span class="tech-spec-val">JavaFX (FXML, Controllers)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Build</span>
+              <span class="tech-spec-val">Apache Maven (pom.xml)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Tests</span>
+              <span class="tech-spec-val">JUnit 5</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Licence</span>
+              <span class="tech-spec-val">Apache 2.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">groups</span>
+            Équipe
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--md-on-surface-variant); line-height: 1.6;">
+            Projet mené en équipe de 5 étudiants en première année de BUT Informatique à l'IUT du Limousin.
+          </p>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">link</span>
+            Ressources
+          </h3>
+          <a href="https://github.com/krousseau19/latice" target="_blank" rel="noopener" class="btn btn--tonal" style="width: 100%; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            Voir le code sur GitHub
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════ PAGINATION ENTRE PROJETS ═══════════════ -->
+  <nav class="project-pagination" aria-label="Navigation projets">
+    <a href="sisyphe.html" class="pagination-btn pagination-btn--prev">
+      <span class="material-symbols-rounded">arrow_back</span>
+      Projet précédent : Sisyphe.io
+    </a>
+    <a href="kathara.html" class="pagination-btn pagination-btn--next">
+      Projet suivant : Simulation Kathara
+      <span class="material-symbols-rounded">arrow_forward</span>
+    </a>
+  </nav>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kylian Rousseau — Portfolio BUT 3 Informatique</p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox Native -->
+  <dialog id="imageModal">
+    <div class="modal-content">
+      <div class="modal-content__bar">
+        <span id="modalCaption">Aperçu</span>
+        <button class="modal-close-btn" id="modalClose" aria-label="Fermer">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <img id="modalImage" src="" alt="">
+    </div>
+  </dialog>
+
+  <script src="project.js"></script>
+</body>
+</html>

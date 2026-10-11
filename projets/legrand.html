@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Industriel Legrand — Kylian Rousseau</title>
+  <meta name="description" content="Digitalisation des modes opératoires industriels pour les opérateurs de presse Legrand. Application Vue 3, TypeScript et Express.">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header class="project-nav">
+    <div class="project-nav__inner">
+      <a href="../index.html#projects" class="project-nav__back">
+        <span class="material-symbols-rounded">arrow_back</span>
+        Retour au portfolio
+      </a>
+      <div class="project-nav__right">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="material-symbols-rounded theme-icon">dark_mode</span>
+        </button>
+        <a href="https://github.com/krousseau19/sae_legrand" target="_blank" rel="noopener" class="btn btn--filled btn--sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Dépôt GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="project-hero">
+    <div class="project-hero__inner">
+      <div class="project-hero__meta">
+        <span class="chip chip--tonal">
+          <span class="material-symbols-rounded">factory</span>
+          Projet Industriel Réel
+        </span>
+        <span class="chip chip--outline">Partenaire : Legrand</span>
+        <span class="chip chip--outline">BUT Informatique</span>
+      </div>
+
+      <h1 class="project-hero__title">Fiche de Sécurité Presse &amp; Modes Opératoires</h1>
+      <p class="project-hero__tagline">
+        Conception et développement d'une application web ergonomique dédiée à la digitalisation, 
+        l'édition visuelle par blocs et la consultation sécurisée des procédures industrielles pour les opérateurs de presses d'usine.
+      </p>
+
+      <div class="project-hero__bar">
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Rôle de Kylian</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">person</span>
+            Développeur Full-Stack
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Équipe</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">group</span>
+            5 développeurs
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Technologies</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">code</span>
+            Vue 3 &bull; TS &bull; Express
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Méthodologie</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">sync</span>
+            Agile / Sprints
+          </span>
+        </div>
+      </div>
+
+      <div class="project-hero__actions">
+        <a href="https://github.com/krousseau19/sae_legrand" target="_blank" rel="noopener" class="btn btn--filled">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Consulter le code sur GitHub
+        </a>
+        <a href="#galerie" class="btn btn--outlined">
+          <span class="material-symbols-rounded">image</span>
+          Voir les captures d'écran
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ APERÇU VISUEL PRINCIPAL ═══════════════ -->
+  <div class="project-banner-preview" id="galerie">
+    <div class="project-banner-preview__frame">
+      <img src="../assets/img/legrand_preview.jpg" alt="Interface de l'éditeur de fiches de sécurité Legrand" class="project-banner-preview__img" fetchpriority="high">
+      <div class="project-banner-preview__caption">
+        <span>Aperçu de l'interface métier — Fiche de sécurité &amp; Mode Opératoire de presse hydraulique</span>
+        <span class="material-symbols-rounded">zoom_in</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTENU PRINCIPAL ═══════════════ -->
+  <main class="project-content">
+    <div class="project-grid-layout">
+
+      <!-- Colonne principale -->
+      <div class="project-main-col">
+
+        <!-- Contexte & Problématique -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">lightbulb</span>
+            Contexte &amp; Enjeux industriels
+          </h2>
+          <p class="project-section__text">
+            Dans le secteur industriel chez <strong>Legrand</strong>, la documentation opérationnelle et les fiches de sécurité des presses d'emboutissage étaient historiquement créées et maintenues sous <strong>Microsoft Excel</strong>.
+          </p>
+          <p class="project-section__text">
+            Cette pratique présentait des limites critiques au quotidien :
+          </p>
+          <ul class="project-section__text" style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+            <li><strong>Complexité d'édition</strong> : mise en forme manuelle laborieuse et peu ergonomique pour les techniciens et responsables de ligne.</li>
+            <li><strong>Intégration d'images difficile</strong> : les repères visuels, annotations et flèches de sécurité se déplaçaient lors de la moindre modification de cellule.</li>
+            <li><strong>Rendu hétérogène</strong> : chaque atelier produisait des fiches avec des polices, tailles et dispositions divergentes.</li>
+            <li><strong>Consultation peu adaptée au terrain</strong> : manipulation incommode sur les écrans tactiles ou postes dédiés en usine.</li>
+          </ul>
+          <p class="project-section__text">
+            <strong>Notre mission</strong> : concevoir une application web sur-mesure, réactive et standardisée, permettant de concevoir rapidement un mode opératoire modulaire par blocs, avec import Excel automatique et mode lecteur sécurisé pour les opérateurs terrain.
+          </p>
+        </article>
+
+        <!-- Fonctionnalités Clés -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">check_circle</span>
+            Fonctionnalités &amp; Conception technique
+          </h2>
+          <div class="project-features-list">
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">drag_indicator</span></div>
+              <h3 class="feature-card__title">Éditeur modulaire Drag &amp; Drop</h3>
+              <p class="feature-card__desc">
+                Organisation séquentielle des étapes opératoires sous forme de blocs déplaçables. Réorganisation instantanée de la chronologie d'assemblage en glisser-déposer.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">table_chart</span></div>
+              <h3 class="feature-card__title">Import automatique Excel</h3>
+              <p class="feature-card__desc">
+                Copier-coller direct d'un tableau de nomenclature depuis Excel (références, désignations, quantités/répétitions) générant automatiquement la structure du document.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">draw</span></div>
+              <h3 class="feature-card__title">Annotations visuelles &amp; Rognage</h3>
+              <p class="feature-card__desc">
+                Insertion d'images de machines, ajout de repères graphiques (flèches de direction, cercles d'alerte, contours) et outil de rognage intégré sans logiciel externe.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">visibility</span></div>
+              <h3 class="feature-card__title">Double vue Éditeur / Lecteur</h3>
+              <p class="feature-card__desc">
+                Bascule immédiate entre le mode édition (1468×717 px) pour les méthodes et le mode lecture sécurisé (911×772 px) épuré pour l'opérateur en atelier.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Galerie d'images -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">photo_library</span>
+            Visuels du projet
+          </h2>
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="../assets/img/legrand_preview.jpg" alt="Tableau de bord et éditeur de fiches de sécurité Legrand" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Éditeur &amp; Schéma de presse</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/img/legrand_logo.png" alt="Identité visuelle Legrand" loading="lazy" style="object-fit: contain; padding: 1.5rem; background: #ffffff;">
+              <div class="gallery-item__label">
+                <span>Partenariat industriel Legrand</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Extrait de Code & Architecture -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">terminal</span>
+            Architecture &amp; Extraits de code
+          </h2>
+          <p class="project-section__text">
+            L'architecture logicielle sépare strictement le frontend réactif <strong>Vue 3</strong> (orchestré avec Vite et TypeScript) et le serveur <strong>Express / Node.js</strong> fournissant les endpoints REST pour la persistance des fiches et la gestion des flux JSON.
+          </p>
+
+          <div class="code-showcase">
+            <div class="code-showcase__header">
+              <div class="code-showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span>server/routes/modesOperatoires.ts</span>
+            </div>
+            <pre><code>// Exemple d'endpoint d'enregistrement atomique d'un mode opératoire
+import { Router, Request, Response } from 'express';
+import { validateModeOperatoire } from '../validators';
+import { saveProcedureFile } from '../services/fileStorage';
+
+const router = Router();
+
+router.post('/api/procedures', async (req: Request, res: Response) => {
+  try {
+    const { reference, title, blocks, metadata } = req.body;
+    
+    // Validation du schéma des blocs et étapes
+    const isValid = validateModeOperatoire(blocks);
+    if (!isValid) {
+      return res.status(400).json({ error: 'Structure des blocs non conforme' });
+    }
+
+    // Sauvegarde horodatée avec métadonnées d'atelier
+    const result = await saveProcedureFile({
+      reference,
+      title,
+      blocks,
+      updatedAt: new Date().toISOString()
+    });
+
+    return res.status(200).json({ success: true, id: result.id });
+  } catch (error) {
+    return res.status(500).json({ error: 'Erreur lors de la sauvegarde du mode opératoire' });
+  }
+});
+
+export default router;</code></pre>
+          </div>
+        </article>
+
+        <!-- Défis & Solutions -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">psychology</span>
+            Défis techniques relevés
+          </h2>
+          <div class="project-section__text">
+            <ul style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><strong>Contraintes strictes de gabarit écran</strong> : L'application devait garantir un affichage strict en mode Éditeur (1468×717) et Lecteur (911×772) avec une typographie de 14px et une hauteur de ligne de 18px pour correspondre fidèlement aux moniteurs d'atelier.</li>
+              <li><strong>Gestion des calques et annotations</strong> : Synchronisation en temps réel des formes géométriques, flèches directionnelles et textes au-dessus des images lors du déplacement ou du redimensionnement d'un bloc.</li>
+              <li><strong>Qualité et tests</strong> : Mise en place d'une suite de tests unitaires avec Jest pour garantir la stabilité du parsing Excel et la validité des modèles TypeScript.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Colonne latérale (Spécifications) -->
+      <aside class="project-sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">info</span>
+            Fiche Technique
+          </h3>
+          <div class="tech-spec-list">
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Type</span>
+              <span class="tech-spec-val">Application Web Métier</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Client</span>
+              <span class="tech-spec-val">Legrand France</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Cadre</span>
+              <span class="tech-spec-val">SAE BUT 2 Informatique</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Frontend</span>
+              <span class="tech-spec-val">Vue 3, TypeScript, Vite</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Backend</span>
+              <span class="tech-spec-val">Node.js, Express</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Tests</span>
+              <span class="tech-spec-val">Jest, Nodemon</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Versionnage</span>
+              <span class="tech-spec-val">Git, GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">groups</span>
+            Équipe de développement
+          </h3>
+          <ul class="tech-spec-list">
+            <li class="tech-spec-item">
+              <span class="tech-spec-key">ROUSSEAU Kylian</span>
+              <span class="tech-spec-val">Développeur</span>
+            </li>
+            <li class="tech-spec-item">
+              <span class="tech-spec-key">GERMANEAU Noah</span>
+              <span class="tech-spec-val">Développeur</span>
+            </li>
+            <li class="tech-spec-item">
+              <span class="tech-spec-key">DELMART Scotty</span>
+              <span class="tech-spec-val">Développeur</span>
+            </li>
+            <li class="tech-spec-item">
+              <span class="tech-spec-key">FRANCAIS Nina</span>
+              <span class="tech-spec-val">Développeur</span>
+            </li>
+            <li class="tech-spec-item">
+              <span class="tech-spec-key">GIANG Gia Bao</span>
+              <span class="tech-spec-val">Développeur</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">link</span>
+            Ressources
+          </h3>
+          <a href="https://github.com/krousseau19/sae_legrand" target="_blank" rel="noopener" class="btn btn--tonal" style="width: 100%; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            Voir le dépôt GitHub
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════ PAGINATION ENTRE PROJETS ═══════════════ -->
+  <nav class="project-pagination" aria-label="Navigation projets">
+    <a href="../index.html#projects" class="pagination-btn pagination-btn--prev">
+      <span class="material-symbols-rounded">apps</span>
+      Tous les projets
+    </a>
+    <a href="sisyphe.html" class="pagination-btn pagination-btn--next">
+      Projet suivant : Sisyphe.io
+      <span class="material-symbols-rounded">arrow_forward</span>
+    </a>
+  </nav>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kylian Rousseau — Portfolio BUT 3 Informatique</p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox Native -->
+  <dialog id="imageModal">
+    <div class="modal-content">
+      <div class="modal-content__bar">
+        <span id="modalCaption">Aperçu</span>
+        <button class="modal-close-btn" id="modalClose" aria-label="Fermer">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <img id="modalImage" src="" alt="">
+    </div>
+  </dialog>
+
+  <script src="project.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sisyphe.io — Sokoban revisité | Kylian Rousseau</title>
+  <meta name="description" content="Sisyphe.io, jeu vidéo de réflexion en pixel art lauréat des Trophées NSI 2024. Lead Developer, Game Designer et Pixel Artist.">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header class="project-nav">
+    <div class="project-nav__inner">
+      <a href="../index.html#projects" class="project-nav__back">
+        <span class="material-symbols-rounded">arrow_back</span>
+        Retour au portfolio
+      </a>
+      <div class="project-nav__right">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="material-symbols-rounded theme-icon">dark_mode</span>
+        </button>
+        <a href="https://github.com/Acciaw/sisyphe.io" target="_blank" rel="noopener" class="btn btn--filled btn--sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Dépôt GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="project-hero">
+    <div class="project-hero__inner">
+      <div class="project-hero__meta">
+        <span class="chip chip--tonal">
+          <span class="material-symbols-rounded">emoji_events</span>
+          Lauréat Académique Trophées NSI 2024
+        </span>
+        <span class="chip chip--outline">Projet Primé</span>
+        <span class="chip chip--outline">Game Dev &bull; Python</span>
+      </div>
+
+      <h1 class="project-hero__title">Sisyphe.io — Sokoban revisité</h1>
+      <p class="project-hero__tagline">
+        Jeu vidéo de réflexion en pixel art combinant mécaniques de Sokoban modernes, éditeur de niveaux interactif, 
+        solveur algorithmique et support multilingue complet.
+      </p>
+
+      <div class="project-hero__bar">
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Rôle de Kylian</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">stars</span>
+            Lead Dev &bull; Pixel Artist
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Équipe</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">group</span>
+            5 développeurs
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Technologies</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">code</span>
+            Python 3 &bull; Pygame &bull; Tkinter
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Distinction</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">military_tech</span>
+            1er Prix Académique NSI
+          </span>
+        </div>
+      </div>
+
+      <div class="project-hero__actions">
+        <a href="https://github.com/Acciaw/sisyphe.io" target="_blank" rel="noopener" class="btn btn--filled">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Dépôt du projet sur GitHub
+        </a>
+        <a href="#galerie" class="btn btn--outlined">
+          <span class="material-symbols-rounded">image</span>
+          Galerie Pixel Art
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ APERÇU VISUEL PRINCIPAL ═══════════════ -->
+  <div class="project-banner-preview" id="galerie">
+    <div class="project-banner-preview__frame">
+      <img src="../assets/img/sisyphe_world.png" alt="Aperçu des mondes en pixel art de Sisyphe.io" class="project-banner-preview__img" fetchpriority="high">
+      <div class="project-banner-preview__caption">
+        <span>Artwork du monde de Sisyphe.io — Graphismes originaux en Pixel Art réalisés pour le projet</span>
+        <span class="material-symbols-rounded">zoom_in</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTENU PRINCIPAL ═══════════════ -->
+  <main class="project-content">
+    <div class="project-grid-layout">
+
+      <!-- Colonne principale -->
+      <div class="project-main-col">
+
+        <!-- Contexte & Origine -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">history_edu</span>
+            Origine &amp; Inspiration mythologique
+          </h2>
+          <p class="project-section__text">
+            Inspiré par le châtiment mythologique du roi Sisyphe, condamné à pousser éternellement un rocher au sommet d'une colline, 
+            <strong>Sisyphe.io</strong> modernise le concept historique du casse-tête <strong>Sokoban</strong>.
+          </p>
+          <p class="project-section__text">
+            Le joueur incarne Sisyphe et doit acheminer d'imposants blocs jusqu'à des stèles d'activation sacrées. Au-delà du simple puzzle mécanique, le projet intègre des dynamiques novatrices : interactions d'éléments physiques (glace, dalles de téléportation, interrupteurs sensibles), système de rembobinage temporel, et une ambiance rétro soignée.
+          </p>
+          <p class="project-section__text">
+            Présenté lors de l'édition 2024 des <strong>Trophées NSI (Numérique et Sciences Informatiques)</strong>, le projet a remporté le <strong>1er Prix du Jury Académique</strong>, distingué pour l'excellence de son code, son originalité artistique et son exhaustivité documentaire.
+          </p>
+        </article>
+
+        <!-- Rôle de Kylian & Fonctionnalités -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">sports_esports</span>
+            Fonctionnalités &amp; Conception
+          </h2>
+          <div class="project-features-list">
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">code</span></div>
+              <h3 class="feature-card__title">Lead Developer</h3>
+              <p class="feature-card__desc">
+                Coordination technique de l'équipe de 5 développeurs. Structuration de la boucle de jeu Pygame, gestion des états (menus, niveaux, pause) et optimisation du framerate (60 FPS constants).
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">palette</span></div>
+              <h3 class="feature-card__title">Pixel Artist &amp; Game Designer</h3>
+              <p class="feature-card__desc">
+                Création intégrale de l'identité graphique : sprite sheets d'animation de Sisyphe, tilesets des blocs et des sols, illustrations de décors monumentaux et titrage rétro.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">grid_view</span></div>
+              <h3 class="feature-card__title">Éditeur de niveaux intégré</h3>
+              <p class="feature-card__desc">
+                Développement d'un éditeur dédié en Tkinter/Python permettant à tout joueur de concevoir, tester et exporter ses propres énigmes au format JSON.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">translate</span></div>
+              <h3 class="feature-card__title">Moteur Multilingue</h3>
+              <p class="feature-card__desc">
+                Système d'internationalisation dynamique avec dictionnaires JSON gérant 10 langues (Français, Anglais, Espagnol, Russe, Chinois, Japonais, Arabe, etc.).
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Galerie d'images Pixel Art -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">photo_library</span>
+            Galerie d'illustrations &amp; Pixel Art
+          </h2>
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="../assets/img/sisyphe_500.png" alt="Sisyphe poussant son rocher - Artwork Pixel Art" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Personnage Sisyphe — Pixel Art</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/img/sisyphe_menu.png" alt="Logo et menu d'accueil du jeu Sisyphe.io" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Écran d'accueil &amp; Typographie</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/img/sisyphe_bg.png" alt="Panorama et décors du jeu" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Décors panoramiques de l'Olympe</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Extrait de Code & Logique -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">terminal</span>
+            Extraits de code &amp; Moteur physique
+          </h2>
+          <p class="project-section__text">
+            Le cœur du moteur gère la détection de collision matricielle, l'inertie des blocs poussés et l'historique d'actions pour permettre l'annulation (`Undo / Redo`) en temps constant.
+          </p>
+
+          <div class="code-showcase">
+            <div class="code-showcase__header">
+              <div class="code-showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span>app.py — Gestion des collisions et déplacements de blocs</span>
+            </div>
+            <pre><code># Extrait de la logique de déplacement d'un rocher dans la matrice
+def tenter_deplacement(grille, position_joueur, direction):
+    dx, dy = direction
+    x, y = position_joueur
+    nx, ny = x + dx, y + dy
+    
+    # Vérification des bordures de la carte
+    if not (0 <= nx < len(grille[0]) and 0 <= ny < len(grille)):
+        return False, position_joueur
+
+    cible = grille[ny][nx]
+    
+    # Déplacement libre si case vide ou dalle d'activation
+    if cible in [CASE_VIDE, CIBLE_ACTIVATION]:
+        return True, (nx, ny)
+        
+    # Poussée d'un rocher (Sokoban)
+    if cible in [ROCHER_CLASSIQUE, ROCHER_LOURD]:
+        nnx, nny = nx + dx, ny + dy
+        if 0 <= nnx < len(grille[0]) and 0 <= nny < len(grille):
+            destination_rocher = grille[nny][nnx]
+            if destination_rocher in [CASE_VIDE, CIBLE_ACTIVATION]:
+                # Déplacement atomique du rocher
+                grille[nny][nnx] = ROCHER_CLASSIQUE
+                grille[ny][nx] = CASE_VIDE
+                return True, (nx, ny)
+                
+    return False, position_joueur</code></pre>
+          </div>
+        </article>
+
+        <!-- Bilan & Reconnaissance -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">military_tech</span>
+            Bilan &amp; Reconnaissance
+          </h2>
+          <div class="project-section__text">
+            <p>
+              Ce projet a constitué une étape fondamentale dans mon parcours de développeur :
+            </p>
+            <ul style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem;">
+              <li><strong>Gestion de projet d'équipe</strong> : Attribution des rôles, réunions de synchronisation, gestion des versions sous Git et respect d'un calendrier strict de livraison.</li>
+              <li><strong>Rigueur documentaire</strong> : Rédaction d'un dossier technique complet de plus de 40 pages détaillant l'architecture, les diagrammes de classes et les algorithmes de résolution.</li>
+              <li><strong>Reconnaissance officielle</strong> : Élu meilleur projet académique de l'académie de Limoges par le jury des Trophées NSI.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Colonne latérale -->
+      <aside class="project-sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">info</span>
+            Fiche Technique
+          </h3>
+          <div class="tech-spec-list">
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Genre</span>
+              <span class="tech-spec-val">Puzzle Game / Réflexion</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Moteur</span>
+              <span class="tech-spec-val">Python 3.11 &bull; Pygame</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Outils GUI</span>
+              <span class="tech-spec-val">Tkinter (Éditeur)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Graphismes</span>
+              <span class="tech-spec-val">Pixel Art original (Aseprite)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Sonorités</span>
+              <span class="tech-spec-val">Chiptune &amp; SFX 8-bit</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Licence</span>
+              <span class="tech-spec-val">CC0 1.0 Universal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">workspace_premium</span>
+            Distinction NSI 2024
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--md-on-surface-variant); line-height: 1.6;">
+            <strong>Lauréat Académique</strong> du concours national des Trophées NSI 2024 récompensant les meilleurs projets d'informatique.
+          </p>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">link</span>
+            Ressources
+          </h3>
+          <a href="https://github.com/Acciaw/sisyphe.io" target="_blank" rel="noopener" class="btn btn--tonal" style="width: 100%; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            Voir le code sur GitHub
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════ PAGINATION ENTRE PROJETS ═══════════════ -->
+  <nav class="project-pagination" aria-label="Navigation projets">
+    <a href="legrand.html" class="pagination-btn pagination-btn--prev">
+      <span class="material-symbols-rounded">arrow_back</span>
+      Projet précédent : Legrand
+    </a>
+    <a href="latice.html" class="pagination-btn pagination-btn--next">
+      Projet suivant : Latice (JavaFX)
+      <span class="material-symbols-rounded">arrow_forward</span>
+    </a>
+  </nav>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kylian Rousseau — Portfolio BUT 3 Informatique</p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox Native -->
+  <dialog id="imageModal">
+    <div class="modal-content">
+      <div class="modal-content__bar">
+        <span id="modalCaption">Aperçu</span>
+        <button class="modal-close-btn" id="modalClose" aria-label="Fermer">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <img id="modalImage" src="" alt="">
+    </div>
+  </dialog>
+
+  <script src="project.js"></script>
+</body>
+</html>

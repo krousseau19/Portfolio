@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation Réseau Kathará — SAE 2.03 | Kylian Rousseau</title>
+  <meta name="description" content="Simulation d'un réseau informatique d'entreprise multi-routeurs avec Kathará, routage IP, DHCP, passerelle NAT et analyse de trames Wireshark.">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="project-page.css">
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <header class="project-nav">
+    <div class="project-nav__inner">
+      <a href="../index.html#projects" class="project-nav__back">
+        <span class="material-symbols-rounded">arrow_back</span>
+        Retour au portfolio
+      </a>
+      <div class="project-nav__right">
+        <button class="nav__theme-toggle" id="themeToggle" aria-label="Changer de thème">
+          <span class="material-symbols-rounded theme-icon">dark_mode</span>
+        </button>
+        <a href="https://github.com/krousseau19/SAE-2.03" target="_blank" rel="noopener" class="btn btn--filled btn--sm">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Dépôt GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="project-hero">
+    <div class="project-hero__inner">
+      <div class="project-hero__meta">
+        <span class="chip chip--tonal">
+          <span class="material-symbols-rounded">lan</span>
+          Administration Systèmes &amp; Réseaux
+        </span>
+        <span class="chip chip--outline">Kathará &bull; Linux</span>
+        <span class="chip chip--outline">Analyse Wireshark</span>
+      </div>
+
+      <h1 class="project-hero__title">Simulation Réseau d'Entreprise &amp; Routage</h1>
+      <p class="project-hero__tagline">
+        Conception, déploiement conteneurisé et audit d'une infrastructure réseau multi-routeurs avec adressage IP, 
+        serveur DHCP dynamique, services sécurisés (SSH, FTP), passerelle NAT et analyse de flux par paquets Wireshark.
+      </p>
+
+      <div class="project-hero__bar">
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Rôle de Kylian</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">dns</span>
+            Architecte Réseau &amp; Sysadmin
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Environnement</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">terminal</span>
+            Kathará &bull; Debian &bull; Bash
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Protocoles</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">router</span>
+            IP, DHCP, NAT, SSH, FTP, DNS
+          </span>
+        </div>
+        <div class="project-hero__bar-item">
+          <span class="project-hero__bar-label">Audit &amp; Sécurité</span>
+          <span class="project-hero__bar-value">
+            <span class="material-symbols-rounded" style="color:var(--md-primary)">search</span>
+            Analyse de trames Wireshark
+          </span>
+        </div>
+      </div>
+
+      <div class="project-hero__actions">
+        <a href="https://github.com/krousseau19/SAE-2.03" target="_blank" rel="noopener" class="btn btn--filled">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          Voir les scripts Kathará sur GitHub
+        </a>
+        <a href="#galerie" class="btn btn--outlined">
+          <span class="material-symbols-rounded">image</span>
+          Topologie &amp; Wireshark
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BANNIÈRE TOPOLOGIE ═══════════════ -->
+  <div class="project-banner-preview" id="galerie">
+    <div class="project-banner-preview__frame">
+      <img src="../assets/img/kathara_topology.jpg" alt="Topologie réseau du lab Kathará" class="project-banner-preview__img" fetchpriority="high">
+      <div class="project-banner-preview__caption">
+        <span>Schéma topologique — Architecture multi-routeurs, sous-réseaux PC, DMZ serveurs et passerelle NAT</span>
+        <span class="material-symbols-rounded">zoom_in</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ CONTENU PRINCIPAL ═══════════════ -->
+  <main class="project-content">
+    <div class="project-grid-layout">
+
+      <!-- Colonne principale -->
+      <div class="project-main-col">
+
+        <!-- Objectifs & Topologie -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">schema</span>
+            Objectifs &amp; Architecture Réseau
+          </h2>
+          <p class="project-section__text">
+            Ce projet réalisé dans le cadre de la SAE 2.03 a pour but de modéliser et déployer une infrastructure réseau complète 
+            isolée dans des conteneurs légers <strong>Kathará</strong>. L'objectif était de maîtriser l'interconnexion de plusieurs sous-réseaux, 
+            le paramétrage de tables de routage statiques et dynamiques, la distribution d'adresses dynamiques et le diagnostic de sécurité réseau.
+          </p>
+          <div class="project-features-list">
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">hub</span></div>
+              <h3 class="feature-card__title">Cœur de réseau Backbone (r)</h3>
+              <p class="feature-card__desc">
+                Routeur central interconnectant 3 liaisons point-à-point en <code>10.0.x.0/28</code> et assurant le pontage NAT (<code>iptables MASQUERADE</code>) vers le réseau externe/Internet.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">dns</span></div>
+              <h3 class="feature-card__title">Serveur DHCP dynamique (r_c)</h3>
+              <p class="feature-card__desc">
+                Configuration d'un serveur <code>isc-dhcp-server</code> desservant la plage <code>172.23.198.0/23</code> pour les machines clientes avec bail, passerelle par défaut et serveurs DNS.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">storage</span></div>
+              <h3 class="feature-card__title">DMZ &amp; Services Réseau</h3>
+              <p class="feature-card__desc">
+                Mise en place de nœuds serveurs dédiés : serveur de fichiers FTP (<code>vsftpd</code> sur <code>sf</code>), serveur d'administration SSH (<code>sadmin</code>) et serveur Web (<code>sweb</code>).
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-card__icon"><span class="material-symbols-rounded">analytics</span></div>
+              <h3 class="feature-card__title">Audit &amp; Captures Wireshark</h3>
+              <p class="feature-card__desc">
+                Sniffing de trafic sur les interfaces virtuelles pour analyser en profondeur la négociation DORA, les flux TCP/UDP et comparer la sécurité FTP (texte clair) vs SSH (chiffré).
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Galerie Wireshark -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">photo_library</span>
+            Analyses de trames avec Wireshark
+          </h2>
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="../assets/img/kathara_wireshark_ftp.png" alt="Capture Wireshark de sessions FTP en clair" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Analyse Wireshark — Flux FTP en clair</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="../assets/img/kathara_wireshark_ssh.png" alt="Capture Wireshark de session SSH chiffrée" loading="lazy">
+              <div class="gallery-item__label">
+                <span>Analyse Wireshark — Session SSH chiffrée</span>
+                <span class="material-symbols-rounded">fullscreen</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Scripts de démarrage Kathará -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">terminal</span>
+            Scripts d'amorçage &amp; Configuration réseau
+          </h2>
+          <p class="project-section__text">
+            Chaque machine du laboratoire Kathará est provisionnée automatiquement au boot via son script <code>.startup</code>. 
+            Voici un extrait du script du routeur cœur <code>r.startup</code> configurant le routage inter-sous-réseaux et le NAT masquerade :
+          </p>
+
+          <div class="code-showcase">
+            <div class="code-showcase__header">
+              <div class="code-showcase__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span>r.startup — Configuration IP, Routage &amp; iptables NAT</span>
+            </div>
+            <pre><code># Configuration des interfaces d'interconnexion backbone
+ip addr add 10.0.2.1/28 dev eth0
+ip link set eth0 up
+
+ip addr add 10.0.3.1/28 dev eth1
+ip link set eth1 up
+
+ip addr add 10.0.4.1/28 dev eth2
+ip link set eth2 up
+
+# Routes statiques vers les réseaux clients et la zone serveurs
+ip route add 172.23.196.0/22 via 10.0.2.2 dev eth0
+ip route add 192.12.64.0/23  via 10.0.4.2 dev eth2
+
+# Activation du routage IPv4 dans le noyau Linux
+sysctl -w net.ipv4.ip_forward=1
+
+# Configuration de la translation d'adresses NAT pour l'accès Internet
+iptables -t nat -A POSTROUTING -o eth3 -j MASQUERADE</code></pre>
+          </div>
+        </article>
+
+        <!-- Résultats de l'audit de sécurité -->
+        <article class="project-section">
+          <h2 class="project-section__heading">
+            <span class="material-symbols-rounded">security</span>
+            Conclusions de l'audit de sécurité
+          </h2>
+          <div class="project-section__text">
+            <ul style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem;">
+              <li><strong>Vulnérabilité critique du protocole FTP</strong> : L'interception des paquets Wireshark a démontré que les commandes <code>USER</code> et <code>PASS</code> circulent en texte brut, permettant une récupération instantanée des mots de passe par un attaquant sur le même sous-réseau.</li>
+              <li><strong>Protection assurée par SSH</strong> : L'échange de clés Diffie-Hellman lors du handshake garantit le chiffrement complet des données utiles (payload chiffré illisible sans la clé privée).</li>
+              <li><strong>Validation du DHCP</strong> : Confirmation du cycle complet <em>Discover → Offer → Request → Acknowledge</em> sur le réseau virtuel sans collision d'adresses IP.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Colonne latérale -->
+      <aside class="project-sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">info</span>
+            Fiche Technique
+          </h3>
+          <div class="tech-spec-list">
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Type</span>
+              <span class="tech-spec-val">Laboratoire Réseau Conteneurisé</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Moteur</span>
+              <span class="tech-spec-val">Kathará (Docker)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">OS invités</span>
+              <span class="tech-spec-val">Debian GNU/Linux</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">DHCP</span>
+              <span class="tech-spec-val">isc-dhcp-server</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Pare-feu / NAT</span>
+              <span class="tech-spec-val">iptables (MASQUERADE)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Analyseur</span>
+              <span class="tech-spec-val">Wireshark (pcap)</span>
+            </div>
+            <div class="tech-spec-item">
+              <span class="tech-spec-key">Licence</span>
+              <span class="tech-spec-val">Apache 2.0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">hub</span>
+            Topologie
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--md-on-surface-variant); line-height: 1.6;">
+            1 routeur cœur, 3 routeurs de bordure, 4 postes PC clients, 4 serveurs dédiés, 7 domaines de collision distincts.
+          </p>
+        </div>
+
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">
+            <span class="material-symbols-rounded">link</span>
+            Ressources
+          </h3>
+          <a href="https://github.com/krousseau19/SAE-2.03" target="_blank" rel="noopener" class="btn btn--tonal" style="width: 100%; justify-content: center;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            Voir le lab sur GitHub
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════ PAGINATION ENTRE PROJETS ═══════════════ -->
+  <nav class="project-pagination" aria-label="Navigation projets">
+    <a href="latice.html" class="pagination-btn pagination-btn--prev">
+      <span class="material-symbols-rounded">arrow_back</span>
+      Projet précédent : Latice (JavaFX)
+    </a>
+    <a href="python-games.html" class="pagination-btn pagination-btn--next">
+      Projet suivant : Mini-jeux Python &amp; IA
+      <span class="material-symbols-rounded">arrow_forward</span>
+    </a>
+  </nav>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Kylian Rousseau — Portfolio BUT 3 Informatique</p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox Native -->
+  <dialog id="imageModal">
+    <div class="modal-content">
+      <div class="modal-content__bar">
+        <span id="modalCaption">Aperçu</span>
+        <button class="modal-close-btn" id="modalClose" aria-label="Fermer">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      <img id="modalImage" src="" alt="">
+    </div>
+  </dialog>
+
+  <script src="project.js"></script>
+</body>
+</html>
