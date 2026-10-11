@@ -57,7 +57,7 @@
 
       <div class="project-hero__bar">
         <div class="project-hero__bar-item">
-          <span class="project-hero__bar-label">Rôle de Kylian</span>
+          <span class="project-hero__bar-label">Mon rôle</span>
           <span class="project-hero__bar-value">
             <span class="material-symbols-rounded" style="color:var(--md-primary)">person</span>
             Développeur Algorithmique
@@ -91,24 +91,9 @@
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
           Explorer le code sur GitHub
         </a>
-        <a href="#galerie" class="btn btn--outlined">
-          <span class="material-symbols-rounded">image</span>
-          Aperçu de la suite de jeux
-        </a>
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════ BANNIÈRE TERMINAL ═══════════════ -->
-  <div class="project-banner-preview" id="galerie">
-    <div class="project-banner-preview__frame">
-      <img src="../assets/img/python_games_preview.jpg" alt="Interface de sélection et terminal de la suite de jeux Python" class="project-banner-preview__img" fetchpriority="high">
-      <div class="project-banner-preview__caption">
-        <span>Aperçu de la console de jeux — Menu principal, sélection d'IA et affichage du leaderboard</span>
-        <span class="material-symbols-rounded">zoom_in</span>
-      </div>
-    </div>
-  </div>
 
   <!-- ═══════════════ CONTENU PRINCIPAL ═══════════════ -->
   <main class="project-content">
@@ -180,48 +165,6 @@
           <p class="project-section__text">
             <strong>Persistance des profils</strong> : Les statistiques de jeu, les scores cumulés et le classement général sont sérialisés de manière atomique dans un fichier binaire <code>Data/data.sav</code> via la bibliothèque <code>pickle</code> de Python.
           </p>
-        </article>
-
-        <!-- Extrait de Code & IA -->
-        <article class="project-section">
-          <h2 class="project-section__heading">
-            <span class="material-symbols-rounded">terminal</span>
-            Extrait de code : Algorithme d'IA du Puissance 4
-          </h2>
-          <p class="project-section__text">
-            Extrait de l'analyse heuristique prioritaire du Puissance 4 :
-          </p>
-
-          <div class="code-showcase">
-            <div class="code-showcase__header">
-              <div class="code-showcase__dots">
-                <span></span><span></span><span></span>
-              </div>
-              <span>Programmes/puissance4.py — Prise de décision de l'IA</span>
-            </div>
-            <pre><code># Stratégie de l'IA optimale au Puissance 4
-def coup_ia_optimal(grille, symbole_ia, symbole_joueur):
-    colonnes_valides = [c for c in range(7) if grille[0][c] == ' ']
-    
-    # 1. Vérifier si l'IA peut gagner au coup suivant
-    for col in colonnes_valides:
-        grille_simulee = simuler_coup(grille, col, symbole_ia)
-        if verifier_victoire(grille_simulee, symbole_ia):
-            return col  # Coup de victoire immédiate
-
-    # 2. Bloquer l'adversaire s'il a une menace de victoire directe
-    for col in colonnes_valides:
-        grille_simulee = simuler_coup(grille, col, symbole_joueur)
-        if verifier_victoire(grille_simulee, symbole_joueur):
-            return col  # Coup de contre défensif prioritaire
-
-    # 3. Privilégier la colonne centrale stratégique (colonne 3)
-    if 3 in colonnes_valides:
-        return 3
-
-    # 4. Choix de repli sur les colonnes adjacentes
-    return colonnes_valides[len(colonnes_valides) // 2]</code></pre>
-          </div>
         </article>
 
         <!-- Bilan pédagogique -->
