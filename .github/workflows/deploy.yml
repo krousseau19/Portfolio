@@ -1,0 +1,43 @@
+
+name: Deploy Portfolio to Coolify
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-deployment
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Trigger Coolify deployment
+    runs-on: [self-hosted, Linux, X64]
+
+    if: github.repository == 'krousseau19/Portfolio'
+
+    timeout-minutes: 5
+
+    steps:
+      - name: Trigger deployment via local Coolify API
+        env:
+          COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
+          COOLIFY_APP_UUID: ${{ secrets.COOLIFY_APP_UUID }}
+        run: |
+          set -eu
+
+          test -n "$COOLIFY_TOKEN"
+          test -n "$COOLIFY_APP_UUID"
+
+          curl --fail-with-body --silent --show-error \
+            --connect-timeout 10 \
+            --max-time 60 \
+            --request POST \
+            --header "Authorization: Bearer ${COOLIFY_TOKEN}" \
+            --header "Accept: application/json" \
+            "http://192.168.1.68:8000/api/v1/deploy?uuid=${COOLIFY_APP_UUID}"
